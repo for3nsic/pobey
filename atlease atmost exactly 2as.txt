@@ -1,0 +1,18 @@
+%{
+int c=0;
+%}
+%%
+[a/A]{
+c++;
+}
+%%
+main()
+{
+yylex();
+if(c==2)
+pirntf("There are exactly 2a's);
+else if(c>2)
+printf("There are atleast 2 a's");
+else
+printf("There are atmost 2 a's");
+}

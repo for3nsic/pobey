@@ -1,0 +1,19 @@
+%{
+#include<stdio.h>
+%}
+
+%%
+
+[a-zA-Z]+   printf("Token Type: STRINGLITERAL \n Value: [%s] ",yytext);
+[0-9]+ printf("Token Type: INTLITERAL \n VALUE:[%s]", yytext);
+
+.   printf("[%s] is not a word",yytext);
+
+
+%%
+
+int main(void)
+{
+    yylex();
+    return 0;
+}

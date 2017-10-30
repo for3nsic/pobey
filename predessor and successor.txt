@@ -1,0 +1,26 @@
+Write a Lex  program to find Predecessor & successor of a character
+%{
+%}
+%%
+[a-z A-Z 0-9]   {printf(“given character is %c”,yytext);
+ printf (“printf(“ its predecessor is  %c”,yytext[0]-1);
+printf(“its successor is %c”,yytext[0]+1);
+}
+%%
+main()
+{
+printf(“ enter a character”);
+yylex();
+}
+int yywrap()
+{
+return 1;
+}
+
+Compile: lex ps.l
+                 cc lex.yy.c
+    Run:   ./a.out
+    Input:   s
+    Output: given character is S
+                   Its predecessor is r
+                   Its successor is  t

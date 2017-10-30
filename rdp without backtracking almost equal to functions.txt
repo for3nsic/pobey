@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<conio.h>
+int i=0;
+char str[30];
+int s()
+{
+if(str[i]=='c')
+i++;
+else
+return 0;
+if(a())
+i++;
+else
+return 0;
+if(str[i]=='d'&&str[i+1]==NULL)
+return 1;
+else
+return 0;
+}
+int a()
+{
+if(str[i]=='a')
+i++;
+else
+return 0;
+if(a())
+return 1;
+else
+return 0;
+}
+int a1()
+{
+if(str[i]=='b')
+return 1;
+else
+return 0;
+}
+void main()
+{
+clrscr();
+printf(Ënter string:");
+scanf("%s",str);
+if(s())
+printf("The string is accepted");
+else
+printf(The string is not accepted"");
+getch();
+}

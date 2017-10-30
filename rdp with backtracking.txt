@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<conio.h>
+int i=0,j=0;
+char i=0,j=0;
+int s()
+{
+if(str[i]=='c')
+i++
+else
+return 0;
+if(a())
+i++;
+else
+return 0;
+if(str[i]==''d' && str[i+1]==NULL)
+return 1;
+else
+return 0;
+}
+int a()
+{
+if(str[i]=='a')
+{
+j=i;
+i++;
+if(str[i]==''b')
+return 1;
+else
+i=j;
+printf(str[i]=='b')
+return 1;
+else
+i=j;
+if(str[i]=='a')
+return 1;
+}
+}
+else
+return 0;
+}
+void main()
+{
+clrscr();
+printf(Ënter a string);
+scanf("%s",str);
+if(s())
+printf("The string is accepted:=");
+else
+printf("The string isn't accepted:");
+getch();
+}
+
+
+o/p enter string cad
+the string is accepted

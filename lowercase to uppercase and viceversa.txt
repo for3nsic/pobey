@@ -1,0 +1,42 @@
+// Lex file: cap.l
+
+
+lower [a-z]
+CAPS  [A-Z]
+space    [ \t\n]
+
+%%
+{lower}         {printf("%c",yytext[0]- 32);}
+{CAPS}        {printf("%c",yytext[0]+ 32);}
+{space}        ECHO;
+.                    ECHO;
+%%
+
+main()
+{
+    yylex();
+    
+}
+
+Output:
+nn@linuxmint ~ $ lex cap.l
+nn@linuxmint ~ $ gcc lex.yy.c -ll
+nn@linuxmint ~ $ ./a.out<tst.txt
+WWW.2K8618.BLOGSPOT.COM
+sanjana    jamsheena chaithanya neethu
+GOVINDAPRASAD VIPIN ADARSH SHIVIN
+baby brinda kavya helen
+SALMAN TINU RICHARD  SIBIN 
+SHIVIN laji NABEEL
+www.2k8cse.cu.cc
+nn@linuxmint ~ $ 
+
+// tst.txt
+
+www.2k8618.blogspot.com
+SANJANA    JAMSHEENA CHAITHANYA NEETHU
+govindaprasad vipin adarsh shivin
+BABY BRINDA KAVYA HELEN
+salman tinu richard  sibin 
+shivin LAJI nabeel
+WWW.2K8CSE.CU.CC

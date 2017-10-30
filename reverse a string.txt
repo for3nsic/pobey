@@ -1,0 +1,22 @@
+%
+{
+int i;
+%}
+%%
+%%
+main()
+{
+nn=uuleng;
+i=1;
+while(i<=n)\
+{
+printf(yytext(n-i));
+i++;
+}
+}
+
+
+
+o/p
+hacked
+dekcah
